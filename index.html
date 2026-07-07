@@ -492,6 +492,55 @@ body {
   line-height: 1.5;
 }
 
+/* ── MARKET GROWTH ── */
+.market-section { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.market-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+@media (max-width: 720px) { .market-grid { grid-template-columns: 1fr; gap: 32px; } }
+.market-chart-card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px 16px;
+}
+.market-chart-caption {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  letter-spacing: 0.2px;
+}
+.growth-drivers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.driver-tag {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.driver-tag .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.market-note {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 640px;
+}
+
 /* ── BOTTOM CTA SECTION ── */
 .bottom-cta {
   background: var(--white);
@@ -702,6 +751,65 @@ body {
       <span class="carrier-name">UPS</span>
       <span class="carrier-name">FedEx</span>
     </div>
+  </div>
+</div>
+
+<!-- ── MARKET GROWTH ── -->
+<div class="market-section">
+  <div class="section fade-up">
+    <div class="section-label">The Market Opportunity</div>
+    <h2 class="section-heading">A $103 Billion Industry<br>&mdash; And Growing</h2>
+
+    <div class="market-grid">
+      <div>
+        <p class="section-intro" style="margin-bottom:22px;">
+          Australia&rsquo;s Freight &amp; Logistics market is forecast to grow from <strong>$103.2 billion in 2026</strong> to <strong>$126.5 billion by 2031</strong>. Within this enormous market, the Courier, Express &amp; Parcel (CEP) sector is one of the fastest-growing segments, expected to expand at <strong>4.9% annually</strong>.
+        </p>
+        <div class="growth-drivers">
+          <div class="driver-tag"><span class="dot" style="background:var(--pink);"></span>E-commerce</div>
+          <div class="driver-tag"><span class="dot" style="background:var(--yellow);"></span>SMEs</div>
+          <div class="driver-tag"><span class="dot" style="background:var(--blue);"></span>Healthcare</div>
+          <div class="driver-tag"><span class="dot" style="background:var(--pink);"></span>Omnichannel retail</div>
+          <div class="driver-tag"><span class="dot" style="background:var(--blue);"></span>International trade</div>
+        </div>
+        <p class="market-note">
+          At World Options Australia, our franchisees operate at the heart of this growth &mdash; helping businesses access multiple leading courier and freight providers through a single technology platform. Whether it&rsquo;s domestic parcels, international express, road freight, air freight or sea freight, franchisees can offer customers a complete shipping solution while building long-term recurring revenue.
+        </p>
+      </div>
+
+      <div class="market-chart-card">
+        <svg viewBox="0 0 340 220" style="width:100%; height:auto;">
+          <line x1="30" y1="190" x2="320" y2="190" stroke="var(--border)" stroke-width="1"/>
+          <line x1="30" y1="130" x2="320" y2="130" stroke="var(--border)" stroke-width="1" stroke-dasharray="3 4"/>
+          <line x1="30" y1="60"  x2="320" y2="60"  stroke="var(--border)" stroke-width="1" stroke-dasharray="3 4"/>
+
+          <text x="100" y="48" text-anchor="middle" font-family="var(--font)" font-size="15" font-weight="700" fill="var(--ink)">$103.2B</text>
+          <rect x="70" y="60" width="60" height="130" rx="6" fill="var(--blue)"/>
+          <text x="100" y="207" text-anchor="middle" font-family="var(--font)" font-size="12" font-weight="600" fill="var(--text-muted)">2026</text>
+
+          <text x="220" y="19" text-anchor="middle" font-family="var(--font)" font-size="15" font-weight="700" fill="var(--pink)">$126.5B</text>
+          <rect x="190" y="31" width="60" height="159" rx="6" fill="var(--pink)"/>
+          <text x="220" y="207" text-anchor="middle" font-family="var(--font)" font-size="12" font-weight="600" fill="var(--text-muted)">2031 (Forecast)</text>
+        </svg>
+        <div class="market-chart-caption">Australian Freight &amp; Logistics market size, AUD</div>
+      </div>
+    </div>
+
+    <div class="stats-row fade-up">
+      <div class="stat-cell">
+        <div class="stat-number blue">$103.2B</div>
+        <div class="stat-label">Australian Logistics Market size in 2026.</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number pink">$126.5B</div>
+        <div class="stat-label">Forecast market size by 2031.</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number" style="font-size:22px; letter-spacing:-0.5px;">4.9% CAGR</div>
+        <div class="stat-label">Annual growth rate of the Courier, Express &amp; Parcel (CEP) segment &mdash; Australia&rsquo;s fastest-growing logistics category.</div>
+      </div>
+    </div>
+
   </div>
 </div>
 
