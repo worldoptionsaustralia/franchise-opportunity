@@ -1336,9 +1336,10 @@ textarea { resize: vertical; min-height: 90px; }
       .then(function(res) { return res.json(); })
       .then(function(result) {
         if (result.success) {
-          document.getElementById('form-body').style.display = 'none';
-          document.getElementById('form-success').style.display = 'block';
-          document.getElementById('form-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+           .then(function(result) {
+  if (result.success) {
+    window.location.href = 'thank-you.html?name=' + encodeURIComponent(val('fname'));
+  } else {   
         } else {
           throw new Error(result.message || 'Submission failed');
         }
